@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        img{
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        {{url}}
+        <br>
+        <img src="url" alt="">
+        <img v-bind:src="url" alt="">
+        <div v-bind:style="{width: '300px', height: '150px', backgroundColor:'red'}">
+        I am felling sick
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return{
+                    url:"images/flower.jpg"
+                }
+            }
+        })
+
+        app.mount("#app")
+    </script>
+</body>
+</html>
