@@ -3,9 +3,12 @@
 </script>
 
 <template>
-  <h1> Hello Dear </h1>
+  <header-item/>
+  <div>
+    <h1> Hello Dear </h1>
   <h2> {{ msg }}</h2>
   <food-item/>
+  </div>
 </template>
 
 <script>
