@@ -3,4 +3,8 @@ import './assets/main.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+import FoodIteam from './components/FoodIteam.vue'
+const app = createApp(App)
+app.component('food-item', FoodIteam)
+
+app.mount('#app')
