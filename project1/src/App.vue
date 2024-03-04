@@ -2,22 +2,15 @@
 
 <template>
   <header-item />
-  <div class="body">
-    <h1>Hello Dear</h1>
-    <h2>{{ msg }}</h2>
-    <food-item />
-    <food-item
-      food-name="Apple"
-      food-details="Here goes details content about Apple"
-    />
-    <food-item
-      food-name="Mango"
-      food-details="Here goes details content about Mango"
-    />
-    <food-item
-      food-name="Orange"
-      food-details="Here goes details content about Orange"
-    />
+
+  <div>
+    <h1> We will show some dynamic component here </h1>
+    <button @click="myComponent='birds-comp'">Birds</button>
+    <button @click="myComponent='flowers-comp'">Flowers</button>
+  </div>
+
+  <div>
+      <component :is="myComponent"> Will show here </component>
   </div>
 </template>
 
@@ -26,6 +19,7 @@ export default {
   data() {
     return {
       msg: "Welcome to my Home",
+      myComponent:''
     };
   },
 };
