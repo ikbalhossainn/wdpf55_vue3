@@ -10,7 +10,8 @@ import FlowersComp from './components/Flowers.vue'
 import AboutUs from './components/About.vue'
 import ContactUs from './components/Contact.vue'
 
-import {createRouter} from 'vue-router'
+
+import {createRouter, createWebHistory} from 'vue-router'
 
 
 const router = createRouter({
